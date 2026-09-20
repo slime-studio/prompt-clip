@@ -24,6 +24,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
+      <head>
+        <title>PromptClip</title>
+      </head>
       <ChakraProvider theme={theme}>
         <body className={`h-screen ${spectral.className}`}>
           <MainNavigationBar />

@@ -9,12 +9,13 @@ export interface IPromptList
   id?: number
 }
 
-class PromptBoxDB extends Dexie {
+class PromptClipDB extends Dexie {
   prompts!: Table<IPrompt>
   promptLists!: Table<IPromptList>
 
   constructor() {
-    super('promptbox')
+    // Origin-scoped persistence key, not a product name. Do not rename.
+    super('app')
     console.info('Initializing `prompts` table...')
     this.version(1).stores({
       prompts: '++id, index, text',
@@ -23,10 +24,10 @@ class PromptBoxDB extends Dexie {
       promptLists: '++id, index, name, itemIds',
     })
   }
-  static instance(): PromptBoxDB {
-    return new PromptBoxDB()
+  static instance(): PromptClipDB {
+    return new PromptClipDB()
   }
 }
 
-const database = new PromptBoxDB()
+const database = new PromptClipDB()
 export default database

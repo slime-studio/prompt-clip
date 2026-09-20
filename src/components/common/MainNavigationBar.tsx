@@ -11,7 +11,7 @@ const MainNavigation = () => (
       className={`flex flex-row text-center font-bold
       ${robotoBold.className}`}
     >
-      <div className='mr-6'>Promptbox</div>
+      <div className='mr-6'>PromptClip</div>
     </div>
   </Header>
 )

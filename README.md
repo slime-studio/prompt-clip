@@ -1,8 +1,8 @@
-# Promptbox
+# PromptClip
 
 Save reusable texts in lists: prompts, commands, and more. Find them fast, copy in one click.
 
-[Try it now](https://promptbox-ten.vercel.app/)
+[Try it now](https://prompt-clip.vercel.app/)
 
 Create a list, add your text, then click to copy.
 
@@ -97,7 +97,7 @@ The `ci-deployment` workflow uses these GitHub secrets:
 - `VERCEL_PROJECT_ID`
 - `VERCEL_TOKEN`
 
-Create a Vercel project named `promptbox` and add these secrets to the GitHub repository before the first deploy.
+Create a Vercel project named `prompt-clip` and add these secrets to the GitHub repository before the first deploy.
 
 ## Contributing
 
