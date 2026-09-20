@@ -7,7 +7,7 @@ test.beforeEach(async ({ page }) => {
 
 test('loads the home page', async ({ page }) => {
   await expect(
-    page.getByText('Promptbox').first()
+    page.getByText('PromptClip').first()
   ).toBeVisible()
   await expect(page.getByText('Search')).toBeVisible()
   await expect(

@@ -4,7 +4,7 @@ export async function resetDatabase(page: Page) {
   await page.goto('/')
   await page.evaluate(async () => {
     await new Promise<void>((resolve, reject) => {
-      const request = indexedDB.deleteDatabase('promptbox')
+      const request = indexedDB.deleteDatabase('app')
       request.onsuccess = () => resolve()
       request.onerror = () => reject(request.error)
       request.onblocked = () => resolve()
@@ -22,7 +22,7 @@ export async function seedListWithPrompts(
   await page.evaluate(
     async ({ listName, texts }) => {
       await new Promise<void>((resolve, reject) => {
-        const request = indexedDB.open('promptbox')
+        const request = indexedDB.open('app')
         request.onerror = () => reject(request.error)
         request.onsuccess = () => {
           const db = request.result
